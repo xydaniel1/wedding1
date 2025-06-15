@@ -3,51 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimalist Wedding Landing Page</title>
+  <title>Anna & Lukas Wedding</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1>Jane & John</h1>
-    <p>We're getting married!</p>
-    <a href="#rsvp" class="btn">RSVP</a>
+  <header class="navbar">
+    <div class="logo">A&L</div>
+    <nav>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#day">Big Day</a></li>
+        <li><a href="#guestbook">Guestbook</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="details">
-    <h2>Our Story</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder text for the story section.</p>
-  </section>
-
-  <section class="event">
-    <h2>Event Details</h2>
-    <ul>
-      <li><strong>Date:</strong> June 30, 2025</li>
-      <li><strong>Location:</strong> Placeholder Venue</li>
-      <li><strong>Time:</strong> 5:00 PM</li>
-    </ul>
-  </section>
-
-  <section class="gallery">
-    <h2>Gallery</h2>
-    <div class="images">
-      <img src="assets/images/photo1.jpg" alt="Placeholder" />
-      <img src="assets/images/photo2.jpg" alt="Placeholder" />
-      <img src="assets/images/photo3.jpg" alt="Placeholder" />
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>anna & lukas</h1>
+      <p>your love, perfectly captured</p>
+      <p class="sub">Do you remember? It was just a smile. That first glance across the room that made everything else fade away.</p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/hero.jpg" alt="Anna and Lukas" />
     </div>
   </section>
 
-  <section id="rsvp" class="rsvp">
-    <h2>RSVP</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <button type="submit" class="btn">Submit</button>
-    </form>
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-grid">
+      <img src="assets/images/photo1.jpg" alt="Gallery 1" />
+      <img src="assets/images/photo2.jpg" alt="Gallery 2" />
+      <img src="assets/images/photo3.jpg" alt="Gallery 3" />
+      <img src="assets/images/photo4.jpg" alt="Gallery 4" />
+    </div>
+  </section>
+
+  <section class="story-section" id="story">
+    <h2>Every detail tells our story</h2>
+    <p>As the days pass and the big day approaches, every detail feels like a reflection of us. The colors we chose, the words in our vows, and now we’re wedding to tell it — it's more than just a page; it’s the heart of our celebration.</p>
   </section>
 
   <footer>
-    <p>© 2025 Jane & John. All rights reserved.</p>
+    <p>© 2025 Roger Tedski UI. All rights reserved.</p>
   </footer>
 </body>
 </html>
