@@ -439,3 +439,12 @@
   width: 24px;
   height: 24px;
 }
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
