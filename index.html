@@ -1,214 +1,80 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Facebook,
-  Heart,
-  Instagram,
-  Menu,
-  Rss,
-  Twitter,
-  Youtube,
-} from "lucide-react";
-import React from "react";
-
-export default function HomeMinimalist(): JSX.Element {
-  // Navigation items data
-  const navItems = [
-    { title: "OUR STORY", active: true },
-    { title: "BIG DAY", active: false },
-    { title: "GUESTBOOK", active: false },
-    { title: "GALLERY", active: false },
-  ];
-
-  // Social media icons data
-  const socialIcons = [
-    {
-      icon: <Instagram className="w-6 h-6 text-[#78706b]" />,
-      label: "Instagram",
-    },
-    { icon: <Twitter className="w-6 h-6 text-[#78706b]" />, label: "Twitter" },
-    {
-      icon: <Facebook className="w-6 h-6 text-[#78706b]" />,
-      label: "Facebook",
-    },
-    { icon: <Youtube className="w-6 h-6 text-[#78706b]" />, label: "Youtube" },
-    { icon: <Rss className="w-6 h-6 text-[#78706b]" />, label: "RSS" },
-  ];
-
-  return (
-    <div className="flex flex-col items-start relative bg-white">
-      {/* Hero Section */}
-      <div className="relative w-full max-w-[1440px] h-[800px] bg-white">
-        <div className="absolute w-[763px] h-[497px] top-48 left-[117px]">
-          <img
-            className="absolute w-80 h-[497px] top-0 left-[443px] object-cover"
-            alt="Wedding couple portrait"
-            src=""
-          />
-
-          <div className="absolute w-[302px] h-[468px] top-[15px] left-[452px] rounded-[168px] border-[0.94px] border-solid border-white" />
-
-          <div className="absolute w-[439px] top-[152px] left-[161px] [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#e7e4e3] text-[320px] tracking-[0] leading-[normal] whitespace-nowrap">
-            &amp;
-          </div>
-
-          <div className="absolute w-[439px] top-[45px] left-0 [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#292423] text-[140px] tracking-[0] leading-[normal]">
-            anna&nbsp;&nbsp;&nbsp;&nbsp; lukas
-          </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home-minimalist">
+      <div class="hero-section">
+        <div class="overlap-group">
+          <img class="img-hero" src="img/img-hero.jpg" />
+          <div class="border"></div>
+          <div class="text-wrapper">&amp;</div>
+          <div class="anna-lukas">anna&nbsp;&nbsp;&nbsp;&nbsp; lukas</div>
         </div>
-
-        <header className="flex w-[843px] items-center gap-[88px] absolute top-10 left-[325px] bg-transparent">
-          <div className="inline-flex h-10 items-center gap-2 px-0 py-2 relative flex-[0_0_auto]">
-            <div className="relative w-fit mt-[-11.50px] mb-[-9.50px] [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#292423] text-[32px] tracking-[0] leading-[44.8px] whitespace-nowrap">
-              A&amp;L
+        <header class="header">
+          <div class="logo"><div class="a-l">A&amp;L</div></div>
+          <div class="column-navi-links">
+            <div class="navi-linl">
+              <div class="link-one">OUR STORY</div>
+              <img class="line" src="img/line-2.svg" />
             </div>
+            <div class="link-one-wrapper"><div class="div">BIG DAY</div></div>
+            <div class="link-one-wrapper"><div class="div">GUESTBOOK</div></div>
+            <div class="link-one-wrapper"><div class="div">GALLERY</div></div>
           </div>
-
-          <div className="inline-flex items-center gap-10 relative flex-[0_0_auto]">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="inline-flex items-center gap-2.5 relative flex-[0_0_auto]"
-              >
-                <div
-                  className={`relative w-fit mt-[-1.00px] ${item.active ? "[font-family:'Satoshi-Black',Helvetica] font-black" : "[font-family:'Satoshi-Medium',Helvetica] font-medium"} text-[#292423] text-base tracking-[0.64px] leading-6 whitespace-nowrap`}
-                >
-                  {item.title}
-                </div>
-                {item.active && (
-                  <img
-                    className="absolute w-[46px] h-px top-6 left-[29px] object-cover"
-                    alt="Active indicator line"
-                    src=""
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="relative w-[60px] h-[60px] p-0"
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
+          <img class="burger-menu" src="img/burger-menu.svg" />
         </header>
-
-        <div className="absolute w-[505px] top-[287px] left-[935px] [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#292423] text-[80px] tracking-[0] leading-[80px]">
-          your love, perfectly paptured
-        </div>
-
-        <div className="absolute w-[389px] top-[578px] left-[935px] [font-family:'Satoshi-Light',Helvetica] font-light text-[#292423] text-xl tracking-[0] leading-[30px]">
-          Do you remember? It was just a smile. That first glance across the
-          room that made everything else fade away.
-        </div>
+        <div class="your-love-perfectly">your love, perfectly paptured</div>
+        <p class="p">
+          Do you remember? It was just a smile. That first glance across the room that made everything else fade away.
+        </p>
       </div>
-
-      {/* Gallery Section */}
-      <div className="relative w-full max-w-[1440px] h-[720px]">
-        <Card className="absolute w-[793px] h-[664px] top-0 left-[119px] border-none rounded-none overflow-hidden">
-          <CardContent className="p-0 h-full">
-            <img
-              className="w-full h-full object-cover"
-              alt="Wedding couple walking"
-              src=""
-            />
-          </CardContent>
-        </Card>
-
-        <Card className="absolute w-96 h-[246px] top-0 left-[936px] border-none rounded-none overflow-hidden">
-          <CardContent className="p-0 h-full">
-            <img
-              className="w-full h-full object-cover"
-              alt="Wedding portrait"
-              src=""
-            />
-          </CardContent>
-        </Card>
-
-        <Card className="absolute w-96 h-[394px] top-[270px] left-[936px] border-none rounded-none overflow-hidden">
-          <CardContent className="p-0 h-full">
-            <img
-              className="w-full h-full object-cover"
-              alt="Wedding couple in field"
-              src=""
-            />
-          </CardContent>
-        </Card>
+      <div class="gallery-section">
+        <img class="rectangle" src="img/rectangle-2.jpg" />
+        <img class="img" src="img/rectangle-3.png" />
+        <img class="rectangle-2" src="img/rectangle-4.png" />
       </div>
-
-      {/* Story Section */}
-      <div className="relative w-full max-w-[1440px] h-[720px] bg-[#f5f5f3]">
-        <div className="absolute w-[383px] h-[599px] top-[60px] left-[121px] bg-cover bg-[50%_50%]">
-          <img
-            src=""
-            alt="Wedding portrait"
-            className="w-full h-full object-cover"
-          />
-          <div className="relative w-[363px] h-[568px] top-4 left-2.5 rounded-[170.6px] border-[0.95px] border-solid border-white" />
-        </div>
-
-        <div className="flex flex-col w-[551px] items-start gap-8 absolute top-[154px] left-[624px]">
-          <div className="relative w-[555px] h-[191px] mr-[-4.00px]">
-            <div className="absolute w-[551px] top-0 left-0 [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#78706b] text-2xl tracking-[0] leading-9">
-              it all started with a smile
-            </div>
-
-            <div className="absolute w-[551px] top-[52px] left-0 [font-family:'Antic_Didone-Regular',Helvetica] font-normal text-[#292423] text-[64px] tracking-[0] leading-[64px]">
-              every detail tells our story
-            </div>
+      <div class="share-our-love">
+        <div class="overlap"><div class="rectangle-3"></div></div>
+        <div class="frame">
+          <div class="group">
+            <p class="it-all-started-with">it all started with a smile</p>
+            <p class="every-detail-tells">every detail tells our story</p>
           </div>
-
-          <div className="flex flex-col w-[486px] items-start gap-8 relative flex-[0_0_auto]">
-            <div className="relative self-stretch mt-[-1.00px] font-text-medium-light font-[number:var(--text-medium-light-font-weight)] text-[#292423] text-[length:var(--text-medium-light-font-size)] tracking-[var(--text-medium-light-letter-spacing)] leading-[var(--text-medium-light-line-height)] [font-style:var(--text-medium-light-font-style)]">
-              As the days pass and the big day approaches, every detail feels
-              like a reflection of us. The colors we chose, the words in our
-              vows, and now, our wedding website – it&apos;s more than just a
-              page; it&apos;s the heart of our celebration. A place where our
-              friends and family can feel the love we share and be part of our
-              story.
+          <div class="frame-2">
+            <p class="text-wrapper-2">
+              As the days pass and the big day approaches, every detail feels like a reflection of us. The colors we
+              chose, the words in our vows, and now, our wedding website – it’s more than just a page; it’s the heart of
+              our celebration. A place where our friends and family can feel the love we share and be part of our story.
+            </p>
+            <div class="buttons-button">
+              <img class="heart" src="img/heart.svg" />
+              <div class="text-padding"><div class="text">Share our love</div></div>
             </div>
-
-            <Button
-              variant="outline"
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 relative flex-[0_0_auto] rounded-lg overflow-hidden border border-solid border-[#a8a19d] h-auto"
-            >
-              <Heart className="w-5 h-5" />
-              <span className="font-text-md-semibold font-[number:var(--text-md-semibold-font-weight)] text-[#292423] text-[length:var(--text-md-semibold-font-size)] tracking-[var(--text-md-semibold-letter-spacing)] leading-[var(--text-md-semibold-line-height)] whitespace-nowrap [font-style:var(--text-md-semibold-font-style)]">
-                Share our love
-              </span>
-            </Button>
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="flex flex-col w-full max-w-[1440px] items-start relative flex-[0_0_auto] bg-1-color-modes-colors-background-bg-primary">
-        <div className="flex flex-col items-center gap-[64px] pt-[48px] pb-[48px] px-0 relative self-stretch w-full flex-[0_0_auto] bg-[#fafafa]">
-          <div className="flex flex-col max-w-[1280px] items-start gap-[64px] pr-[32px] pl-[32px] py-0 relative w-full flex-[0_0_auto]">
-            <div className="flex flex-wrap items-center justify-center gap-[32px] relative self-stretch w-full flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] font-text-md-regular font-[number:var(--text-md-regular-font-weight)] text-[#78706b] text-[length:var(--text-md-regular-font-size)] tracking-[var(--text-md-regular-letter-spacing)] leading-[var(--text-md-regular-line-height)] whitespace-nowrap [font-style:var(--text-md-regular-font-style)]">
-                © 2025 Roger Tedoldi UI. All rights reserved.
-              </div>
-
-              <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-                {socialIcons.map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    size="icon"
-                    className="w-6 h-6 p-0"
-                  >
-                    {social.icon}
-                    <span className="sr-only">{social.label}</span>
-                  </Button>
-                ))}
+      <footer class="footer">
+        <div class="section">
+          <div class="container">
+            <div class="content">
+              <p class="footer-text">© 2025 Roger Tedoldi UI. All rights reserved.</p>
+              <div class="social-icons">
+                <img class="social-icon" src="img/social-icon.svg" />
+                <img class="social-icon" src="img/image.svg" />
+                <img class="social-icon" src="img/social-icon-4.svg" />
+                <img class="social-icon" src="img/social-icon-3.svg" />
+                <img class="social-icon" src="img/social-icon-2.svg" />
               </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  );
-}
+  </body>
+</html>
