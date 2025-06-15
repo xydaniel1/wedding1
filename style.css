@@ -1,14 +1,29 @@
 .home-minimalist {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   background-color: #ffffff;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.home-minimalist .hero-section,
+.home-minimalist .gallery-section,
+.home-minimalist .share-our-love,
+.home-minimalist .footer {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .home-minimalist .hero-section {
   position: relative;
-  width: 1440px;
   height: 800px;
   background-color: #ffffff;
 }
@@ -196,7 +211,6 @@
 
 .home-minimalist .gallery-section {
   position: relative;
-  width: 1440px;
   height: 720px;
 }
 
@@ -227,7 +241,6 @@
 
 .home-minimalist .share-our-love {
   position: relative;
-  width: 1440px;
   height: 720px;
   background-color: #f5f5f3;
 }
@@ -367,10 +380,7 @@
 .home-minimalist .footer {
   display: flex;
   flex-direction: column;
-  width: 1440px;
   align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
   background-color: var(--1-color-modes-colors-background-bg-primary);
 }
 
@@ -438,13 +448,4 @@
   position: relative;
   width: 24px;
   height: 24px;
-}
-
-.page-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
 }
